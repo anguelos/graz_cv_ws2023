@@ -86,7 +86,7 @@ Although only team2 outperformed the baseline on the testset and is the uncontes
 it can be seen that all teams submited well regularized methods that performed marginally bellow the baseline.
 Team Rado stands out as a method that outperformed the winner on the validation error but not on the test-set; this requires more investigation but it should be pointed out that team Rado had access to strong GPU computation and thus might have over user-used the validation set.
 The volatillity of the validation curves demonstrates that a more accurate measurement could be obtained by repeating the experiments and analysing average performance.
-![Validation Accuracy over time][val_accuracy.png]
-![Team colors][teams.png]
+![Validation Accuracy over time](val_accuracy.png)
+![Team colors](teams.png)
 
 
