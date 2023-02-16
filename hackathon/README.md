@@ -61,4 +61,32 @@ Each script was modified to execute for 200 epochs.
 
 ### Results
 
-The submited nodebooks were evaluated at the end of the script and the results recorded inside tensorboard
+The submited nodebooks were evaluated at the end of the script and the results recorded inside tensorboard.
+In order to explore and analyse the results run from this directory:
+
+```bash
+tensorboard --logdir ./
+```
+And point the browser to the link indicated on the standard output.
+
+
+|Team        |  Train Error @ 200 |  Validation Error @ 200 |  Test Error @ 200 |
+|------------|--------------------|-------------------------|-------------------|
+|baseline    |             85.25% |                  82.60% |            83.89% |
+|team1       |             86.49% |                  81.94% |            82.89% |
+|team2       |             87.75% |                  85.14% |            84.56% |
+|team3       |             85.0%  |                  82.5%  |            83.22% |
+|team4       |             82.88% |                  82.5%  |            82.21% |
+|teamRado    |             89.63% |                  85.5%  |            83.56% |
+
+
+### Analysis
+
+Although only team2 outperformed the baseline on the testset and is the uncontested winner,
+it can be seen that all teams submited well regularized methods that performed marginally bellow the baseline.
+Team Rado stands out as a method that outperformed the winner on the validation error but not on the test-set; this requires more investigation but it should be pointed out that team Rado had access to strong GPU computation and thus might have over user-used the validation set.
+The volatillity of the validation curves demonstrates that a more accurate measurement could be obtained by repeating the experiments and analysing average performance.
+![Validation Accuracy over time][val_accuracy.png]
+![Team colors][teams.png]
+
+
